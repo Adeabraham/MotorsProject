@@ -74,7 +74,7 @@ public class SearchForAnyCarByPostcode extends BasePage
     @Then("the search for {string} is displayed")
     public void a_page_is_displayed_showing_the_cars_in_the_postcode(String Postcode)
     {
-
+       //
     }
 
     @Then("I click on one of the search results")
