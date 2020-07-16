@@ -35,39 +35,60 @@ public class SearchForAnyCarByPostcode extends BasePage
         homePage.enterLocationCode(Postcode);
     }
 
-    @When("I select any car of my choice from Make\\(Any) dropdown")
-    public void i_select_any_car_of_my_choice_from_Make_Any_dropdown() {
-
+    @When("I select {string} from Make dropdown")
+    public void i_select_any_car_of_my_choice_from_Make_Any_dropdown(String selectMake)
+    {
+      homePage.selectCarMake(selectMake);
     }
 
-    @When("I select any model of my choice from Model\\(Any) dropdown")
-    public void i_select_any_model_of_my_choice_from_Model_Any_dropdown() {
-
+    @When("I select {string} from Model dropdown")
+    public void i_select_any_model_of_my_choice_from_Model_Any_dropdown(String selectModel)
+    {
+      homePage.selectCarModel(selectModel);
     }
 
-    @When("I select any price of my choice from Min Price drop down")
-    public void i_select_any_price_of_my_choice_from_Min_Price_drop_down() {
-
+    @When("I select {string} from Min Price drop down")
+    public void i_select_any_price_of_my_choice_from_Min_Price_drop_down(String minimumPrice)
+    {
+      homePage.selectMinPrice(minimumPrice);
     }
 
-    @When("I select any price of my choice from Max Price drop down")
-    public void i_select_any_price_of_my_choice_from_Max_Price_drop_down() {
+    @When("I select {string} from Max Price drop down")
+    public void i_select_any_price_of_my_choice_from_Max_Price_drop_down(String maximumPrice)
+    {
+      homePage.selectMaxPrice(maximumPrice);
+    }
 
+    @When("I select {string} out of the HighestPrice drop down")
+    public void i_select_out_of_the_HighestPrice_drop_down(String maximumPrice)
+    {
+        homePage.selectMaxPrice(maximumPrice);
     }
 
     @When("I click on search button")
-    public void i_click_on_search_button() {
-
+    public void i_click_on_search_button()
+    {
+       searchResultPage=homePage.clickSearchButton();
     }
 
-    @Then("a page is displayed showing the cars in the postcode")
-    public void a_page_is_displayed_showing_the_cars_in_the_postcode() {
+    @Then("the search for {string} is displayed")
+    public void a_page_is_displayed_showing_the_cars_in_the_postcode(String Postcode)
+    {
 
     }
 
     @Then("I click on one of the search results")
-    public void i_click_on_one_of_the_search_results() {
-
+    public void i_click_on_one_of_the_search_results()
+    {
+     productDetailPage = searchResultPage.clickOnAnyResult();
     }
 
 }
+
+
+
+//@When("I select {string} out of the HighestPrice drop down")
+//public void i_select_out_of_the_HighestPrice_drop_down(String string) {
+//    // Write code here that turns the phrase above into concrete actions
+//    throw new io.cucumber.java.PendingException();
+//}

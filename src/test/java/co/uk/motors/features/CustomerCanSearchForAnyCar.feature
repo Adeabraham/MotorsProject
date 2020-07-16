@@ -6,17 +6,23 @@ Feature: Search by for car
   Scenario Outline: Customer can search for any car by location postcode
     Given I navigate to motors homepage
     When I enter "<Postcode>" into the postcode field
-    And I select any car of my choice from Make(Any) dropdown
-    And I select any model of my choice from Model(Any) dropdown
-    And I select any price of my choice from Min Price drop down
-    And I select any price of my choice from Max Price drop down
+    And I select "<CarType>" from Make dropdown
+    And I select "<CarModel>" from Model dropdown
+    And I select "<MinPrice>" from Min Price drop down
+    And I select "<HighestPrice>" out of the HighestPrice drop down
     And I click on search button
-    Then a page is displayed showing the cars in the postcode
+    Then the search for "<Postcode>" is displayed
     And I click on one of the search results
 
   Examples:
-  |Postcode|
-  |BL2 2DE |
-#  |M40 7EY |
+  |Postcode|CarType|CarModel|MinPrice| HighestPrice|
+  |BL2 2DE |Hyundai|i30     |£2,000  | £6,000      |
+  |M40 7EY |BMW    |8 Series|£4,000  | £20,000     |
 #  |        |
 #  |MMM NNN |
+#   And I select "<HighestPrice>" from Max Price drop down
+
+# And I select "<MaximPrice>" from Max Price drop down
+ # |Maximprice|
+  #|£6,000 |
+  #|£20,000 |
