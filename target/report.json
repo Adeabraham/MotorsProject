@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-07-16T20:39:43.110Z",
+        "start_timestamp": "2020-07-17T16:47:27.002Z",
         "before": [
           {
             "result": {
-              "duration": 7516000000,
+              "duration": 13121000000,
               "status": "passed"
             },
             "match": {
@@ -22,7 +22,7 @@
         "after": [
           {
             "result": {
-              "duration": 15255000000,
+              "duration": 13470000000,
               "status": "passed"
             },
             "match": {
@@ -35,7 +35,7 @@
         "steps": [
           {
             "result": {
-              "duration": 7279000000,
+              "duration": 16941000000,
               "status": "passed"
             },
             "line": 7,
@@ -47,7 +47,7 @@
           },
           {
             "result": {
-              "duration": 364000000,
+              "duration": 1103000000,
               "status": "passed"
             },
             "line": 8,
@@ -65,7 +65,7 @@
           },
           {
             "result": {
-              "duration": 208000000,
+              "duration": 1812000000,
               "status": "passed"
             },
             "line": 9,
@@ -83,7 +83,7 @@
           },
           {
             "result": {
-              "duration": 237000000,
+              "duration": 212000000,
               "status": "passed"
             },
             "line": 10,
@@ -101,7 +101,7 @@
           },
           {
             "result": {
-              "duration": 179000000,
+              "duration": 161000000,
               "status": "passed"
             },
             "line": 11,
@@ -119,7 +119,7 @@
           },
           {
             "result": {
-              "duration": 178000000,
+              "duration": 195000000,
               "status": "passed"
             },
             "line": 12,
@@ -137,7 +137,7 @@
           },
           {
             "result": {
-              "duration": 5780000000,
+              "duration": 5948000000,
               "status": "passed"
             },
             "line": 13,
@@ -166,7 +166,7 @@
           },
           {
             "result": {
-              "duration": 4328000000,
+              "duration": 3792000000,
               "status": "passed"
             },
             "line": 15,
@@ -179,11 +179,11 @@
         ]
       },
       {
-        "start_timestamp": "2020-07-16T20:40:24.611Z",
+        "start_timestamp": "2020-07-17T16:48:23.904Z",
         "before": [
           {
             "result": {
-              "duration": 5779000000,
+              "duration": 6746000000,
               "status": "passed"
             },
             "match": {
@@ -191,14 +191,14 @@
             }
           }
         ],
-        "line": 20,
-        "name": "Customer can search for any car by location postcode",
+        "line": 42,
+        "name": "Customer cannot search for any car without location postcode",
         "description": "",
-        "id": "search-by-for-car;customer-can-search-for-any-car-by-location-postcode;;3",
+        "id": "search-by-for-car;customer-cannot-search-for-any-car-without-location-postcode;;2",
         "after": [
           {
             "result": {
-              "duration": 11914000000,
+              "duration": 4463000000,
               "status": "passed"
             },
             "match": {
@@ -211,10 +211,10 @@
         "steps": [
           {
             "result": {
-              "duration": 4236000000,
+              "duration": 9698000000,
               "status": "passed"
             },
-            "line": 7,
+            "line": 31,
             "name": "I navigate to motors homepage",
             "match": {
               "location": "co.uk.motors.stepDefinitions.SearchForAnyCarByPostcode.i_navigate_to_motors_homepage()"
@@ -223,28 +223,27 @@
           },
           {
             "result": {
-              "duration": 356000000,
               "status": "passed"
             },
-            "line": 8,
-            "name": "I enter \"M40 7EY\" into the postcode field",
+            "line": 32,
+            "name": "I did not enter \"\" into the postcode field",
             "match": {
               "arguments": [
                 {
-                  "val": "\"M40 7EY\"",
-                  "offset": 8
+                  "val": "\"\"",
+                  "offset": 16
                 }
               ],
-              "location": "co.uk.motors.stepDefinitions.SearchForAnyCarByPostcode.i_enter_into_the_postcode_field(java.lang.String)"
+              "location": "co.uk.motors.stepDefinitions.SearchForAnyCarByPostcode.i_did_not_enter_into_the_postcode_field(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 202000000,
+              "duration": 254000000,
               "status": "passed"
             },
-            "line": 9,
+            "line": 33,
             "name": "I select \"BMW\" from Make dropdown",
             "match": {
               "arguments": [
@@ -259,15 +258,15 @@
           },
           {
             "result": {
-              "duration": 183000000,
+              "duration": 231000000,
               "status": "passed"
             },
-            "line": 10,
-            "name": "I select \"8 Series\" from Model dropdown",
+            "line": 34,
+            "name": "I select \"4 Series\" from Model dropdown",
             "match": {
               "arguments": [
                 {
-                  "val": "\"8 Series\"",
+                  "val": "\"4 Series\"",
                   "offset": 9
                 }
               ],
@@ -277,15 +276,15 @@
           },
           {
             "result": {
-              "duration": 178000000,
+              "duration": 208000000,
               "status": "passed"
             },
-            "line": 11,
-            "name": "I select \"£4,000\" from Min Price drop down",
+            "line": 35,
+            "name": "I select \"£2,000\" from Min Price drop down",
             "match": {
               "arguments": [
                 {
-                  "val": "\"£4,000\"",
+                  "val": "\"£2,000\"",
                   "offset": 9
                 }
               ],
@@ -298,12 +297,12 @@
               "duration": 182000000,
               "status": "passed"
             },
-            "line": 12,
-            "name": "I select \"£20,000\" out of the HighestPrice drop down",
+            "line": 36,
+            "name": "I select \"£12,500\" out of the HighestPrice drop down",
             "match": {
               "arguments": [
                 {
-                  "val": "\"£20,000\"",
+                  "val": "\"£12,500\"",
                   "offset": 9
                 }
               ],
@@ -313,10 +312,10 @@
           },
           {
             "result": {
-              "duration": 3437000000,
+              "duration": 221000000,
               "status": "passed"
             },
-            "line": 13,
+            "line": 37,
             "name": "I click on search button",
             "match": {
               "location": "co.uk.motors.stepDefinitions.SearchForAnyCarByPostcode.i_click_on_search_button()"
@@ -327,30 +326,12 @@
             "result": {
               "status": "passed"
             },
-            "line": 14,
-            "name": "the search for \"M40 7EY\" is displayed",
+            "line": 38,
+            "name": "then an error page is displayed",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"M40 7EY\"",
-                  "offset": 15
-                }
-              ],
-              "location": "co.uk.motors.stepDefinitions.SearchForAnyCarByPostcode.a_page_is_displayed_showing_the_cars_in_the_postcode(java.lang.String)"
+              "location": "co.uk.motors.stepDefinitions.SearchForAnyCarByPostcode.then_an_error_page_is_displayed()"
             },
             "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1691000000,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "I click on one of the search results",
-            "match": {
-              "location": "co.uk.motors.stepDefinitions.SearchForAnyCarByPostcode.i_click_on_one_of_the_search_results()"
-            },
-            "keyword": "And "
           }
         ]
       }

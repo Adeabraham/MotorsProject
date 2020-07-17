@@ -82,6 +82,18 @@ public class SearchForAnyCarByPostcode extends BasePage
     {
      productDetailPage = searchResultPage.clickOnAnyResult();
     }
+    @When("I did not enter {string} into the postcode field")
+    public void i_did_not_enter_into_the_postcode_field(String Postcode)
+    {
+
+    }
+
+    @Then("then an error page is displayed")
+    public void then_an_error_page_is_displayed()
+    {
+
+    }
+
 
 }
 
